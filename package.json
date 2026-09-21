@@ -1,0 +1,11 @@
+{
+  "name": "froz-kit-companion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "simulate": "node companion/simulator.js",
+    "check": "node --check companion/protocol.js && node --check companion/pipeline.js && node --check companion/simulator.js"
+  }
+}
