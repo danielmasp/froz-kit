@@ -2,45 +2,46 @@
 
 **Embedded Emergency IoT System**
 
-Froz-Kit is an award-winning hardware-software emergency system developed during the Engineering Challenges course at Pontificia Universidad Católica de Chile. The project placed **2nd out of 103 engineering teams**.
+Froz-Kit was developed during the Engineering Challenges course at Pontificia Universidad Católica de Chile and placed **2nd out of 103 engineering teams**.
 
 ## Overview
 
-The system was designed around an endothermic limb-preservation chamber and an emergency alert workflow. An Arduino Nano detects the emergency trigger, sends a compact Bluetooth payload to a mobile companion, and the mobile pipeline enriches the event with real-time GPS coordinates before dispatching an automated API alert.
+The project combined an endothermic limb-preservation chamber with an emergency alert workflow. C/C++ firmware on an Arduino Nano used interrupt-driven logic to trigger sub-second emergency alerts. A mobile companion ingested Bluetooth serial payloads, appended real-time GPS coordinates, and dispatched automated API alerts to emergency services.
 
 ## Key Contributions
 
-- Engineered C/C++ firmware on Arduino Nano using interrupt-driven logic for sub-second emergency-trigger execution.
-- Designed Bluetooth serial communication between the embedded device and mobile companion.
-- Built a mobile processing pipeline that appends live GPS coordinates to incoming device payloads.
-- Integrated automated API alerts for emergency-service workflows.
-- Connected the sensing, communications, mobile, and physical preservation components into an end-to-end prototype.
+- Engineered C/C++ firmware on Arduino Nano using interrupt-driven logic for sub-second execution.
+- Developed a mobile companion pipeline for Bluetooth serial payload ingestion.
+- Appended real-time GPS coordinates to emergency events.
+- Dispatched automated API alerts to emergency services.
+- Designed the end-to-end hardware-software integration for the preservation chamber.
 
 ## System Architecture
 
 ```mermaid
 flowchart TD
-    A[Emergency trigger] --> B[Arduino Nano]
+    A[Emergency trigger] --> B[Arduino Nano firmware]
     B --> C[Bluetooth serial payload]
     C --> D[Mobile companion]
-    D --> E[Real-time GPS enrichment]
-    E --> F[Emergency alert API]
+    D --> E[Real-time GPS coordinates]
+    E --> F[Emergency services API alert]
 ```
 
 ## Technology
 
-- **Embedded:** Arduino Nano, C/C++, interrupt-driven firmware
+- **Firmware:** C/C++ and Arduino Nano
+- **Execution:** Interrupt-driven logic
 - **Connectivity:** Bluetooth serial communication
 - **Mobile pipeline:** Payload ingestion and GPS enrichment
-- **Integration:** REST API alert dispatch
-- **Domain:** Emergency response and IoT systems
+- **Integration:** Automated API alerts
+- **Domain:** Embedded systems and IoT
 
 ## Recognition
 
 **2nd Place — Engineering Challenges at UC Chile**
 
-Selected among 103 first-year engineering teams in one of Chile's most prestigious engineering solutions competitions.
+The project placed 2nd among 103 engineering teams in Chile's most prestigious engineering solutions competition for first-year students.
 
 ## Repository Status
 
-This repository is the public documentation release of Froz-Kit. The original firmware, wiring notes, and mobile implementation are currently being organized for a complete source release.
+This repository currently presents the project's verified architecture and results. The original firmware and mobile implementation are being organized for a complete source release.
